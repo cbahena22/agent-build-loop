@@ -1,0 +1,5 @@
+[project]
+name = "print-quotes"
+version = "0.1.0"
+description = "A tiny quoting library for a fictional print shop."
+requires-python = ">=3.11"

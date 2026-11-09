@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="1100" height="520" role="img" aria-labelledby="t d">
+  <title id="t">The build loop: ten steps from status to a fresh session</title>
+  <desc id="d">A loop of ten steps. A main session reads status and notes, writes a design spec, gets a fresh review of the spec, asks the person open questions, launches workers with disjoint file claims, each worker builds and writes a hand-over note with proof, a fresh audit and security review follows, one branch merges at a time with rollback on red, a decision record and status update are written, and a fresh main session starts at 30 to 40 percent context. Hooks enforce rules on steps five to eight. A person approves on steps four and eight.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #f6f8fa; stroke: #57606a; stroke-width: 1.5; }
+    .pill-h { fill: #ddf4ff; stroke: #0969da; stroke-width: 1.2; }
+    .pill-p { fill: #fff8c5; stroke: #9a6700; stroke-width: 1.2; }
+    .edge { stroke: #57606a; stroke-width: 2; fill: none; }
+    .head { fill: #57606a; }
+    .n { font: 700 15px system-ui, "Segoe UI", Arial, sans-serif; fill: #0969da; }
+    .t { font: 700 16px system-ui, "Segoe UI", Arial, sans-serif; fill: #1f2328; }
+    .s { font: 400 13.5px system-ui, "Segoe UI", Arial, sans-serif; fill: #1f2328; }
+    .p { font: 600 12.5px system-ui, "Segoe UI", Arial, sans-serif; fill: #1f2328; }
+    .l { font: 400 13px system-ui, "Segoe UI", Arial, sans-serif; fill: #424a53; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .box { fill: #161b22; stroke: #8b949e; }
+      .pill-h { fill: #0c2d6b; stroke: #58a6ff; }
+      .pill-p { fill: #2d2208; stroke: #d29922; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .n { fill: #58a6ff; }
+      .t, .s, .p { fill: #e6edf3; }
+      .l { fill: #b1bac4; }
+    }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="head"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1100" height="520"/>
+
+  <!-- row 1: steps 1-5, left to right -->
+  <rect class="box" x="20" y="40" width="192" height="150" rx="8"/>
+  <text class="n" x="34" y="64">1</text><text class="t" x="52" y="64">Read the state</text>
+  <text class="s" x="34" y="92">Main session reads the</text>
+  <text class="s" x="34" y="111">status file and the</text>
+  <text class="s" x="34" y="130">person's notes.</text>
+
+  <rect class="box" x="237" y="40" width="192" height="150" rx="8"/>
+  <text class="n" x="251" y="64">2</text><text class="t" x="269" y="64">Design spec</text>
+  <text class="s" x="251" y="92">Files, interfaces, out</text>
+  <text class="s" x="251" y="111">of scope, security,</text>
+  <text class="s" x="251" y="130">and the proof to run.</text>
+
+  <rect class="box" x="454" y="40" width="192" height="150" rx="8"/>
+  <text class="n" x="468" y="64">3</text><text class="t" x="486" y="64">Fresh review</text>
+  <text class="s" x="468" y="92">A new context reads</text>
+  <text class="s" x="468" y="111">the spec and reports</text>
+  <text class="s" x="468" y="130">gaps before any code.</text>
+
+  <rect class="box" x="671" y="40" width="192" height="150" rx="8"/>
+  <text class="n" x="685" y="64">4</text><text class="t" x="703" y="64">Open questions</text>
+  <text class="s" x="685" y="92">Anything undecided</text>
+  <text class="s" x="685" y="111">goes to the person</text>
+  <text class="s" x="685" y="130">before launch.</text>
+  <rect class="pill-p" x="685" y="152" width="150" height="24" rx="12"/>
+  <text class="p" x="760" y="169" text-anchor="middle">person decides</text>
+
+  <rect class="box" x="888" y="40" width="192" height="150" rx="8"/>
+  <text class="n" x="902" y="64">5</text><text class="t" x="920" y="64">Launch workers</text>
+  <text class="s" x="902" y="92">Disjoint file claims,</text>
+  <text class="s" x="902" y="111">model and effort per</text>
+  <text class="s" x="902" y="130">job; local or cloud lane.</text>
+  <rect class="pill-h" x="902" y="152" width="150" height="24" rx="12"/>
+  <text class="p" x="977" y="169" text-anchor="middle">hooks enforce</text>
+
+  <!-- row 2: steps 6-10, right to left -->
+  <rect class="box" x="888" y="250" width="192" height="150" rx="8"/>
+  <text class="n" x="902" y="274">6</text><text class="t" x="920" y="274">Build + hand-over</text>
+  <text class="s" x="902" y="302">Each worker builds,</text>
+  <text class="s" x="902" y="321">runs its own tests and</text>
+  <text class="s" x="902" y="340">writes proof and cost.</text>
+  <rect class="pill-h" x="902" y="362" width="150" height="24" rx="12"/>
+  <text class="p" x="977" y="379" text-anchor="middle">hooks enforce</text>
+
+  <rect class="box" x="671" y="250" width="192" height="150" rx="8"/>
+  <text class="n" x="685" y="274">7</text><text class="t" x="703" y="274">Fresh audit</text>
+  <text class="s" x="685" y="302">A new context audits</text>
+  <text class="s" x="685" y="321">and reads for security.</text>
+  <text class="s" x="685" y="340">Never the writer.</text>
+  <rect class="pill-h" x="685" y="362" width="150" height="24" rx="12"/>
+  <text class="p" x="760" y="379" text-anchor="middle">hooks enforce</text>
+
+  <rect class="box" x="454" y="250" width="192" height="150" rx="8"/>
+  <text class="n" x="468" y="274">8</text><text class="t" x="486" y="274">Merge, one at a time</text>
+  <text class="s" x="468" y="302">Post-merge checks;</text>
+  <text class="s" x="468" y="321">roll back on red.</text>
+  <rect class="pill-h" x="468" y="342" width="150" height="20" rx="10"/>
+  <text class="p" x="543" y="357" text-anchor="middle">hooks enforce</text>
+  <rect class="pill-p" x="468" y="368" width="150" height="20" rx="10"/>
+  <text class="p" x="543" y="383" text-anchor="middle">person approves</text>
+
+  <rect class="box" x="237" y="250" width="192" height="150" rx="8"/>
+  <text class="n" x="251" y="274">9</text><text class="t" x="269" y="274">Record</text>
+  <text class="s" x="251" y="302">Decision record and a</text>
+  <text class="s" x="251" y="321">status update, so the</text>
+  <text class="s" x="251" y="340">next session starts cold.</text>
+
+  <rect class="box" x="20" y="250" width="192" height="150" rx="8"/>
+  <text class="n" x="34" y="274">10</text><text class="t" x="58" y="274">Fresh main</text>
+  <text class="s" x="34" y="302">A new main session at</text>
+  <text class="s" x="34" y="321">30-40% context, with a</text>
+  <text class="s" x="34" y="340">written handover. Go to 1.</text>
+
+  <!-- arrows -->
+  <line class="edge" x1="212" y1="115" x2="233" y2="115" marker-end="url(#a)"/>
+  <line class="edge" x1="429" y1="115" x2="450" y2="115" marker-end="url(#a)"/>
+  <line class="edge" x1="646" y1="115" x2="667" y2="115" marker-end="url(#a)"/>
+  <line class="edge" x1="863" y1="115" x2="884" y2="115" marker-end="url(#a)"/>
+  <line class="edge" x1="984" y1="190" x2="984" y2="246" marker-end="url(#a)"/>
+  <line class="edge" x1="888" y1="325" x2="867" y2="325" marker-end="url(#a)"/>
+  <line class="edge" x1="671" y1="325" x2="650" y2="325" marker-end="url(#a)"/>
+  <line class="edge" x1="454" y1="325" x2="433" y2="325" marker-end="url(#a)"/>
+  <line class="edge" x1="237" y1="325" x2="216" y2="325" marker-end="url(#a)"/>
+  <line class="edge" x1="116" y1="250" x2="116" y2="194" marker-end="url(#a)"/>
+
+  <!-- legend -->
+  <rect class="pill-h" x="20" y="440" width="150" height="24" rx="12"/>
+  <text class="p" x="95" y="457" text-anchor="middle">hooks enforce</text>
+  <text class="l" x="182" y="457">must-always rules run as hooks and gates (steps 5-8), not as reminders in a prompt</text>
+  <rect class="pill-p" x="20" y="472" width="150" height="24" rx="12"/>
+  <text class="p" x="95" y="489" text-anchor="middle">person approves</text>
+  <text class="l" x="182" y="489">anything that changes a system or a shared branch waits for a person (steps 4 and 8)</text>
+</svg>

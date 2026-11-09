@@ -1,0 +1,3 @@
+{"kind": "abl-review-replay", "note": "Hand-written replies for the abl demo. Synthetic: no model produced them. Keyed by the canonical brief sha256.", "synthetic": true}
+{"brief_sha256": "b353dc84c7952932612638a27d6667d8f5efd34ac11145277cf5f6776c1340e1", "reply": {"findings": [{"path": "print_quotes/summary.py", "reason": "matches the goal; the test covers the two-line case"}], "verdict": "PASS"}, "topic": "add-summary"}
+{"brief_sha256": "c1b338bd08877caeeea490d98e8310b016e111ae5c3d10e35f14bdeed9e5d2d5", "reply": {"findings": [{"path": "print_quotes/totals.py", "reason": "callers outside the claim may still use total(); the merge check will tell"}], "verdict": "PASS-WITH-NOTES"}, "topic": "rename-total"}

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 760" width="360" height="760" role="img" aria-labelledby="t d">
+  <title id="t">A team of Claude agents with five safety rules</title>
+  <desc id="d">A planner writes a short spec. Two workers each get their own folder and a list of files they may change. A guard refuses any edit outside that list. A fresh reviewer who did not write the code checks the work. A person approves. The merge runs the tests: if they pass the work is merged, if main fails the merge is undone automatically.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #f6f8fa; stroke: #57606a; stroke-width: 1.5; }
+    .guard { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .rev { fill: #ddf4ff; stroke: #0969da; stroke-width: 1.5; }
+    .per { fill: #fff8c5; stroke: #9a6700; stroke-width: 1.5; }
+    .ok { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.5; }
+    .bad { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .edge { stroke: #57606a; stroke-width: 2; fill: none; }
+    .head { fill: #57606a; }
+    .n { font: 700 15px system-ui, "Segoe UI", Arial, sans-serif; fill: #0969da; }
+    .t { font: 700 15px system-ui, "Segoe UI", Arial, sans-serif; fill: #1f2328; }
+    .s { font: 400 14px system-ui, "Segoe UI", Arial, sans-serif; fill: #1f2328; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .box { fill: #161b22; stroke: #8b949e; }
+      .guard { fill: #3d1214; stroke: #ff7b72; }
+      .rev { fill: #0c2d6b; stroke: #58a6ff; }
+      .per { fill: #2d2208; stroke: #d29922; }
+      .ok { fill: #0f2d1a; stroke: #3fb950; }
+      .bad { fill: #3d1214; stroke: #ff7b72; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .n { fill: #58a6ff; }
+      .t, .s { fill: #e6edf3; }
+    }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="head"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="360" height="760"/>
+
+  <!-- 1 planner -->
+  <rect class="box" x="20" y="16" width="320" height="76" rx="8"/>
+  <text class="n" x="34" y="40">1</text><text class="t" x="52" y="40">Planner</text>
+  <text class="s" x="34" y="62">Writes a short spec: the goal</text>
+  <text class="s" x="34" y="81">and the files each piece may touch.</text>
+
+  <path class="edge" d="M90 92 V114" marker-end="url(#a)"/>
+  <path class="edge" d="M270 92 V114" marker-end="url(#a)"/>
+
+  <!-- 2 workers -->
+  <rect class="box" x="20" y="116" width="152" height="112" rx="8"/>
+  <text class="n" x="32" y="140">2</text><text class="t" x="50" y="140">Worker A</text>
+  <text class="s" x="32" y="164">Own folder,</text>
+  <text class="s" x="32" y="183">own list of files.</text>
+  <text class="s" x="32" y="202">Builds, commits.</text>
+
+  <rect class="box" x="188" y="116" width="152" height="112" rx="8"/>
+  <text class="n" x="200" y="140">2</text><text class="t" x="218" y="140">Worker B</text>
+  <text class="s" x="200" y="164">Own folder,</text>
+  <text class="s" x="200" y="183">own list of files.</text>
+  <text class="s" x="200" y="202">Builds, commits.</text>
+
+  <path class="edge" d="M96 228 V262" marker-end="url(#a)"/>
+  <path class="edge" d="M264 228 V262" marker-end="url(#a)"/>
+
+  <!-- 3 guard -->
+  <rect class="guard" x="20" y="264" width="320" height="76" rx="8"/>
+  <text class="n" x="34" y="288">3</text><text class="t" x="52" y="288">Guard</text>
+  <text class="s" x="34" y="310">Checks every edit. A file that is</text>
+  <text class="s" x="34" y="329">not on the list: refused.</text>
+
+  <path class="edge" d="M180 340 V372" marker-end="url(#a)"/>
+
+  <!-- 4 reviewer -->
+  <rect class="rev" x="20" y="374" width="320" height="76" rx="8"/>
+  <text class="n" x="34" y="398">4</text><text class="t" x="52" y="398">Fresh reviewer</text>
+  <text class="s" x="34" y="420">A new session that did not write</text>
+  <text class="s" x="34" y="439">the code. Tied to one exact change.</text>
+
+  <path class="edge" d="M180 450 V482" marker-end="url(#a)"/>
+
+  <!-- person -->
+  <rect class="per" x="20" y="484" width="320" height="76" rx="38"/>
+  <text class="t" x="180" y="515" text-anchor="middle">A person approves</text>
+  <text class="s" x="180" y="538" text-anchor="middle">at a terminal. Nothing ships without it.</text>
+
+  <path class="edge" d="M180 560 V592" marker-end="url(#a)"/>
+
+  <!-- 5 merge -->
+  <rect class="box" x="20" y="594" width="320" height="58" rx="8"/>
+  <text class="n" x="34" y="618">5</text><text class="t" x="52" y="618">Merge, then run the tests</text>
+  <text class="s" x="34" y="640">on the branch and again on main.</text>
+
+  <path class="edge" d="M96 652 V684" marker-end="url(#a)"/>
+  <path class="edge" d="M264 652 V684" marker-end="url(#a)"/>
+
+  <rect class="ok" x="20" y="686" width="152" height="60" rx="8"/>
+  <text class="t" x="96" y="711" text-anchor="middle">Tests pass</text>
+  <text class="s" x="96" y="732" text-anchor="middle">merged</text>
+
+  <rect class="bad" x="188" y="686" width="152" height="60" rx="8"/>
+  <text class="t" x="264" y="711" text-anchor="middle">Main fails</text>
+  <text class="s" x="264" y="732" text-anchor="middle">merge undone</text>
+</svg>

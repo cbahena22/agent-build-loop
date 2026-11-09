@@ -1,0 +1,10 @@
+{"id": "clean", "scenario": "clean", "expected": "merged", "rule": "", "os": "any"}
+{"id": "conflict", "scenario": "conflict", "expected": "refused", "rule": "conflict", "os": "any"}
+{"id": "branch-check-fails", "scenario": "branch-check-fails", "expected": "refused", "rule": "branch-check-failed", "os": "any"}
+{"id": "main-check-fails-rollback", "scenario": "main-check-fails", "expected": "rolled-back", "rule": "rollback", "os": "any"}
+{"id": "rollback-refused-by-local-change", "scenario": "rollback-refused", "expected": "rollback-refused", "rule": "rollback-refused", "os": "any"}
+{"id": "stale-audit", "scenario": "stale-audit", "expected": "refused", "rule": "stale-audit", "os": "any"}
+{"id": "no-approval", "scenario": "no-approval", "expected": "refused", "rule": "no-approval", "os": "any"}
+{"id": "block-verdict", "scenario": "block-verdict", "expected": "refused", "rule": "no-pass", "os": "any"}
+{"id": "concurrent-merge", "scenario": "concurrent-merge", "expected": "lock", "rule": "LockBusy", "os": "any"}
+{"id": "stale-lock", "scenario": "stale-lock", "expected": "lock", "rule": "LockStale", "os": "any"}

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-build-loop"
+version = "0.1.0"
+description = "Run several Claude Code workers on one repository safely: worktrees, claims, guard hooks, audits and a merge gate."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+abl = "agent_build_loop.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+agent_build_loop = ["data/**/*", "data/example/print-quotes/.abl.toml", "data/example/print-quotes/.gitattributes"]

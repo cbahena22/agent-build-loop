@@ -1,0 +1,2 @@
+check = ["python", "-m", "unittest", "-q"]
+check_timeout_s = 120
